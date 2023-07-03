@@ -1,0 +1,5 @@
+C:\Users\charl\OneDrive\Documents\Ecole\OOP2\Module06\CoucheAccesDonnees.JSON\obj\Debug\net7.0\CoucheAccesDonnees.JSON.csproj.AssemblyReference.cache
+C:\Users\charl\OneDrive\Documents\Ecole\OOP2\Module06\CoucheAccesDonnees.JSON\obj\Debug\net7.0\CoucheAccesDonnees.JSON.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\charl\OneDrive\Documents\Ecole\OOP2\Module06\CoucheAccesDonnees.JSON\obj\Debug\net7.0\CoucheAccesDonnees.JSON.AssemblyInfoInputs.cache
+C:\Users\charl\OneDrive\Documents\Ecole\OOP2\Module06\CoucheAccesDonnees.JSON\obj\Debug\net7.0\CoucheAccesDonnees.JSON.AssemblyInfo.cs
+C:\Users\charl\OneDrive\Documents\Ecole\OOP2\Module06\CoucheAccesDonnees.JSON\obj\Debug\net7.0\CoucheAccesDonnees.JSON.csproj.CoreCompileInputs.cache
