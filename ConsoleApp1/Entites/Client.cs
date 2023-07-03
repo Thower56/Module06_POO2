@@ -6,7 +6,7 @@ public class Client
     public string Prenom{get; private set;}
     public List<Adresse> Adresses{get; private set;}
 
-    public Client(Guid p_clientId, string p_nom, string p_Prenom, IEnumerable<Adresse> p_adresse)
+    public Client(Guid p_clientId, string p_nom, string p_Prenom, List<Adresse> p_adresse)
     {
         ClientId = p_clientId;
         Nom = p_nom;
