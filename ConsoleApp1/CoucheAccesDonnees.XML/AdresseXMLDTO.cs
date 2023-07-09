@@ -15,7 +15,23 @@ namespace CoucheAccesDonnees.XML
         public string Pays{get; private set;}
 
         public AdresseXMLDTO(){}
-        public AdresseXMLDTO(Adresse p_client){}
-        public Client VersEntite(){}
+        public AdresseXMLDTO(Adresse p_client)
+        {
+            AdresseId = p_client.AdresseId;
+            NumeroCivique = p_client.NumeroCivique;
+            InformationComplementaire = p_client.InformationComplementaire;
+            Odonyme = p_client.Odonyme;
+            TypeVoie = p_client.TypeVoie;
+            CodePostal = p_client.CodePostal;
+            NomMunicipalite = p_client.NomMunicipalite;
+            Etat = p_client.Etat;
+            Pays = p_client.Pays;
+        }
+        public Adresse VersEntite()
+        {
+            Adresse versAdresse = new Adresse(AdresseId, NumeroCivique, InformationComplementaire, Odonyme, TypeVoie, CodePostal, NomMunicipalite, Etat, Pays);
+
+            return versAdresse;
+        }
     }
 }

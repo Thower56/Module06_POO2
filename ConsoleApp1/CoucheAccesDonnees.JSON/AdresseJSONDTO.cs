@@ -31,7 +31,9 @@ namespace CoucheAccesDonnees.JSON
         }
         public Adresse VersEntite()
         {
-            
+            Adresse versAdresse = new Adresse(AdresseId, NumeroCivique, InformationComplementaire, Odonyme, TypeVoie, CodePostal, NomMunicipalite, Etat, Pays);
+
+            return versAdresse;
         }
     }
 }

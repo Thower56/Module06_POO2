@@ -16,17 +16,31 @@ public class Client
     public void AjouterModifierAdresse(Adresse p_adresse)
     {
         bool existe = false;
-        foreach(Adresse a in Adresses)
+        for(int i=0; i < Adresses.Count; ++i)
         {
-            if(a.AdresseId == p_adresse.AdresseId)
+            if (p_adresse.AdresseId == Adresses[i].AdresseId)
             {
-                a. = p_adresse;
+                Adresses[i] = p_adresse;
                 existe = true;
-            }   
+            }
         }
         if(!existe)
         {
             Adresses.Add(p_adresse);
         }
+    }
+
+    public override string ToString()
+    {
+        string client = $"ID      : {ClientId}\n" +
+               $"Nom     : {Nom} \n" +
+               $"Prenom  : {Prenom}\n" +
+               $"Adresses: {Adresses.ToString()}";
+        foreach (Adresse a in Adresses)
+        {
+            client += a.ToString();
+        }
+
+        return client;
     }
 }

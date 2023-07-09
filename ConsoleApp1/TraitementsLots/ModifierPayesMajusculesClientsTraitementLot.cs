@@ -5,5 +5,5 @@ public class ModifierNomPrenomPremiereLettreMajusculesTraitementLot : ITraitemen
 {
     private IDepotClients m_depotClient;
     public ModifierNomPrenomPremiereLettreMajusculesTraitementLot(IDepotClients p_depotClient){}
-    public void Executer();
+    public void Executer() { }
 }
