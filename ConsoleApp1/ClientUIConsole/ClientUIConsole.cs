@@ -14,11 +14,11 @@ namespace Application
 
         public void AfficherMenu()
         {
-            Console.WriteLine(@"
-        1- Saisir un nouveau Client
-        2- Afficher un clients par ID
-        3- Rechercher et afficher Client par Id
-        4- Lister et afficher clients");
+            Console.WriteLine("1- Saisir un nouveau Client\n" +
+                "2- Afficher un clients par ID\n" +
+                "3- Rechercher et afficher Client par Id \n" +
+                "4- Lister et afficher Clients");
+
         }
         public int SaisirChoixMenu()
         {

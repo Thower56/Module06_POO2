@@ -11,8 +11,10 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             var container = new UnityContainer();
-            container.RegisterType<IDepotClients, DepotClientsJSON>();
-            container.RegisterType<IDepotClients, DepotClientsXML>();
+            string fichierJson = "Test.Json";
+            string ficherXML = "Test.XML";
+            container.RegisterType<IDepotClients, DepotClientsJSON>(TypeLifetime.Singleton, new Unity.Injection.InjectionConstructor(new object[] { fichierJson }));
+            //container.RegisterType<IDepotClients, DepotClientsXML>(TypeLifetime.Singleton, new Unity.Injection.InjectionConstructor(new object[] { ficherXML }));
 
             var ui = container.Resolve<ClientUiConsole>();
 
@@ -25,7 +27,17 @@ namespace ConsoleApp1
 
                 switch (choix)
                 {
-
+                    case 1:
+                        ui.SaisirClientAvecAdresse();
+                        break;
+                    case 2:
+                        //ui.RechercherETAfficherClientParId();
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        ui.ListerEtAfficherClients();
+                        break;
                 }
             }
         }
