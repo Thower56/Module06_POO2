@@ -15,7 +15,11 @@ public class ModifierPaysMajusculesClientsTraitementLot : ITraitementLot
 
         foreach (Client c in listeClient)
         {
-            c.Adresses.Where(a => a.Pays.Any(c => Char.IsLower(c))).ToList().ForEach(a => a.ChangerPayEnMajuscule());
+            c.Adresses
+                .Where(a => a.Pays.Any(c => Char.IsLower(c)))
+                .ToList()
+                .ForEach(a => a.ChangerPayEnMajuscule());
+
             m_depotClient.ModifierClient(c);
         }
 

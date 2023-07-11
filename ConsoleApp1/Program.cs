@@ -38,7 +38,9 @@ namespace ConsoleApp1
                         ui.SaisirClientAvecAdresse();
                         break;
                     case 2:
-                        //ui.RechercherETAfficherClientParId();
+                        Console.WriteLine("Quel est l'id du Client a trouver: ");
+                        Guid id = Guid.Parse(Console.ReadLine());
+                        ui.RechercherETAfficherClientParId(id);
                         break;
                     case 3:
                         break;
