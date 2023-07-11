@@ -14,10 +14,28 @@ public class Client
         Adresses = p_adresse;
     }
 
-    public void ChangerNomClient(string p_nom)
+    public void ChangerNomEtPrenomMajusculeClient()
     {
-        this.Nom = p_nom;
+        string nom = Nom;
+        string prenom = Prenom;
+        if (!Char.IsUpper(nom[0]))
+        {
+            string nouveauNom;
+            nouveauNom = nom[0].ToString().ToUpper(); ;
+            nouveauNom += nom.Substring(1).ToLower();
+            Nom = nouveauNom;
+
+        }
+        if (!Char.IsUpper(prenom[0]))
+        {
+            string nouveauPrenom;
+            nouveauPrenom = nom[0].ToString().ToUpper();
+            nouveauPrenom += nom.Substring(1).ToLower();
+            Prenom = nouveauPrenom;
+        }
     }
+
+    public void ChangerPayEnMajuscule() { }
     public void ChangerPrenomClient(string p_prenom)
     {
         this.Prenom = p_prenom;
