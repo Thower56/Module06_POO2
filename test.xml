@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfClient xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Client>
+    <ClientId>de961634-7645-410b-b1bc-52abe60ebe18</ClientId>
+    <Nom>Grondin</Nom>
+    <Prenom>Charles</Prenom>
+    <Adresses>
+      <AdresseXMLDTO>
+        <AdresseId>2d652add-792b-6cc6-09a2-4836c2a9e2f8</AdresseId>
+        <NumeroCivique>560</NumeroCivique>
+        <InformationComplementaire>West</InformationComplementaire>
+        <Odonyme>Gerard Lodge</Odonyme>
+        <TypeVoie>Ports</TypeVoie>
+        <CodePostal>93838</CodePostal>
+        <NomMunicipalite>Handmouth</NomMunicipalite>
+        <Etat>Connecticut</Etat>
+        <Pays>Saint Helena</Pays>
+      </AdresseXMLDTO>
+    </Adresses>
+  </Client>
+  <Client>
+    <ClientId>fb7ffc11-eda9-4947-93c4-8b8a3b6bbda3</ClientId>
+    <Nom>Faggin</Nom>
+    <Prenom>Laurent</Prenom>
+    <Adresses>
+      <AdresseXMLDTO>
+        <AdresseId>9bbe44b5-849c-3995-65ad-c7653640fcb1</AdresseId>
+        <NumeroCivique>599</NumeroCivique>
+        <InformationComplementaire>Northwest</InformationComplementaire>
+        <Odonyme>Bobby Station</Odonyme>
+        <TypeVoie>Cliffs</TypeVoie>
+        <CodePostal>74898-3855</CodePostal>
+        <NomMunicipalite>Jovanhaven</NomMunicipalite>
+        <Etat>Vermont</Etat>
+        <Pays>Reunion</Pays>
+      </AdresseXMLDTO>
+    </Adresses>
+  </Client>
+  <Client>
+    <ClientId>bf72282f-c6ed-4f1e-8da7-ea96fb42c207</ClientId>
+    <Nom>asd</Nom>
+    <Prenom>asd</Prenom>
+    <Adresses>
+      <AdresseXMLDTO>
+        <AdresseId>e35495e2-a7c7-5288-ac86-9c170a0d274e</AdresseId>
+        <NumeroCivique>735</NumeroCivique>
+        <InformationComplementaire>Southeast</InformationComplementaire>
+        <Odonyme>Jerrold Unions</Odonyme>
+        <TypeVoie>Mountain</TypeVoie>
+        <CodePostal>70404</CodePostal>
+        <NomMunicipalite>Lebsackbury</NomMunicipalite>
+        <Etat>Louisiana</Etat>
+        <Pays>Belize</Pays>
+      </AdresseXMLDTO>
+    </Adresses>
+  </Client>
+  <Client>
+    <ClientId>2d299534-277d-43a0-8825-e20423ddff8a</ClientId>
+    <Nom>Test</Nom>
+    <Prenom>Test</Prenom>
+    <Adresses>
+      <AdresseXMLDTO>
+        <AdresseId>12956d5b-4fb1-8f34-293a-e6d57322fec3</AdresseId>
+        <NumeroCivique>863</NumeroCivique>
+        <InformationComplementaire>Southwest</InformationComplementaire>
+        <Odonyme>Ashleigh Point</Odonyme>
+        <TypeVoie>Roads</TypeVoie>
+        <CodePostal>81182-5967</CodePostal>
+        <NomMunicipalite>West Raphaelle</NomMunicipalite>
+        <Etat>Kansas</Etat>
+        <Pays>Tuvalu</Pays>
+      </AdresseXMLDTO>
+    </Adresses>
+  </Client>
+  <Client>
+    <ClientId>70e5364b-1308-4b17-968a-31fc8a2c5cf3</ClientId>
+    <Nom>asdasdasdasd</Nom>
+    <Prenom>dsadsadsadsa</Prenom>
+    <Adresses>
+      <AdresseXMLDTO>
+        <AdresseId>681a3f9e-dd70-4e7e-2323-4cba8f97c9e7</AdresseId>
+        <NumeroCivique>347</NumeroCivique>
+        <InformationComplementaire>North</InformationComplementaire>
+        <Odonyme>Melyssa Rest</Odonyme>
+        <TypeVoie>Center</TypeVoie>
+        <CodePostal>65799-2060</CodePostal>
+        <NomMunicipalite>Spencerstad</NomMunicipalite>
+        <Etat>Washington</Etat>
+        <Pays>Czech Republic</Pays>
+      </AdresseXMLDTO>
+    </Adresses>
+  </Client>
+</ArrayOfClient>

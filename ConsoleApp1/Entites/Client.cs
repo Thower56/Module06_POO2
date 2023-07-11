@@ -13,6 +13,15 @@ public class Client
         Prenom = p_Prenom;
         Adresses = p_adresse;
     }
+
+    public void ChangerNomClient(string p_nom)
+    {
+        this.Nom = p_nom;
+    }
+    public void ChangerPrenomClient(string p_prenom)
+    {
+        this.Prenom = p_prenom;
+    }
     public void AjouterModifierAdresse(Adresse p_adresse)
     {
         bool existe = false;
@@ -35,7 +44,7 @@ public class Client
         string client = $"ID      : {ClientId}\n" +
                $"Nom     : {Nom} \n" +
                $"Prenom  : {Prenom}\n" +
-               $"Adresses: {Adresses.ToString()}";
+               $"Adresses: ";
         foreach (Adresse a in Adresses)
         {
             client += a.ToString();

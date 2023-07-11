@@ -22,7 +22,7 @@ namespace CoucheAccesDonnees.JSON
             if (File.Exists(m_nomFichier))
             {
                 string json = File.ReadAllText(m_nomFichier);
-                listJson = JsonConvert.DeserializeObject<List<ClientJSONDTO>>(m_nomFichier);
+                listJson = JsonConvert.DeserializeObject<List<ClientJSONDTO>>(json);
             }
             else
             {
@@ -39,7 +39,7 @@ namespace CoucheAccesDonnees.JSON
 
             listJson.Add(newClient);
 
-            string stringJson = JsonConvert.SerializeObject(listJson);
+            string stringJson = JsonConvert.SerializeObject(listJson, Formatting.Indented);
             File.WriteAllText(m_nomFichier, stringJson);
 
         }
@@ -68,7 +68,7 @@ namespace CoucheAccesDonnees.JSON
                     listJson[i] = new ClientJSONDTO(p_client);
                 }
             }
-            string stringJson = JsonConvert.SerializeObject(listJson);
+            string stringJson = JsonConvert.SerializeObject(listJson, Formatting.Indented);
             File.WriteAllText(m_nomFichier, stringJson);
         }
     }

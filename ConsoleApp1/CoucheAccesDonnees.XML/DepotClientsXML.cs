@@ -20,29 +20,64 @@ namespace CoucheAccesDonnees.XML
         {
             List<ClientXMLDTO> listXML;
 
-            XmlSerializer serializer = new XmlSerializer(typeof(ClientXMLDTO), new Type[] { typeof(AdresseXMLDTO) });
+            XmlSerializer serializer = new XmlSerializer(typeof(List<ClientXMLDTO>),
+                new Type[]
+                {
+                    typeof(ClientXMLDTO),
+                    typeof(AdresseXMLDTO)
+                });
 
-            using (FileStream r = new FileStream(m_nomFichier, FileMode.Open))
+            if (File.Exists(m_nomFichier))
             {
-                listXML = (List<ClientXMLDTO>)serializer.Deserialize(r);
+                using (FileStream r = new FileStream(m_nomFichier, FileMode.Open))
+                {
+                    listXML = (List<ClientXMLDTO>)serializer.Deserialize(r);
+                }
+            }
+            else
+            {
+                listXML = new List<ClientXMLDTO>();
             }
 
             return listXML;
         }
 
-        private void DepotDeListeClientXml(List<ClientXMLDTO> p_listClient)
+        private void ExportationDeListeClientXml(List<ClientXMLDTO> p_listClient)
         {
             if (p_listClient == null)
             {
                 throw new ArgumentNullException("La liste client ne doit pas etre null");
             }
-            XmlSerializer serializer = new XmlSerializer(typeof(ClientXMLDTO), new Type[] { typeof(AdresseXMLDTO) });
+            XmlSerializer serializer = new XmlSerializer(typeof(List<ClientXMLDTO>), 
+                new Type[] 
+                {
+                    typeof(ClientXMLDTO),
+                    typeof(AdresseXMLDTO) 
+                });
 
-            Stream fs = new FileStream(m_nomFichier, FileMode.Create);
-            XmlWriter writer = new XmlTextWriter(fs, Encoding.Unicode);
+            XmlWriterSettings setting = new XmlWriterSettings();
+            setting.Indent = true;
+            //setting.IndentChars = "\n";
+            
+             
 
-            serializer.Serialize(writer, p_listClient);
-            writer.Close();
+            
+            using (XmlWriter writer = XmlWriter.Create(m_nomFichier, setting))
+            {
+                writer.WriteStartDocument();
+                if (p_listClient.Any())
+                {
+                    serializer.Serialize(writer, p_listClient);
+                }
+                else
+                {
+                    serializer.Serialize(writer, new List<ClientXMLDTO>());
+                }
+                writer.Dispose();
+                writer.Close();
+            }
+            
+            
         }
         public void AjouterClient(Client p_client)
         {
@@ -56,14 +91,14 @@ namespace CoucheAccesDonnees.XML
 
             listeXML.Add(newClient);
 
-            DepotDeListeClientXml(listeXML);
+            ExportationDeListeClientXml(listeXML);
             
         }
         public List<Client> ListerClients()
         {
             List<ClientXMLDTO> listeXML = ImportationClientXML();
 
-            List<Client> listeClient = listeXML.ConvertAll(c => c.VersEntite()).ToList();
+            List<Client> listeClient = listeXML.ConvertAll(c => c.VersEntite());
             return listeClient;
         }
         public Client RechercherClient(Guid p_clientID)

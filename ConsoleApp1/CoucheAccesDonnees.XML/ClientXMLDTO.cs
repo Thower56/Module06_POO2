@@ -5,10 +5,10 @@ namespace CoucheAccesDonnees.XML;
 [XmlType("Client")]
 public class ClientXMLDTO
 {
-    public Guid ClientId {get; private set;}
-    public string Nom{get ; private set;}
-    public string Prenom{get; private set;}
-    public List<AdresseXMLDTO> Adresses{get; private set;}
+    public Guid ClientId {get; set;}
+    public string Nom{get ; set;}
+    public string Prenom{get; set;}
+    public List<AdresseXMLDTO> Adresses{get; set;}
     
     public ClientXMLDTO(){}
     public ClientXMLDTO(Client p_client)

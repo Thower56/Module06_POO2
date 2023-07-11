@@ -1,0 +1,20 @@
+[
+  {
+    "ClientId": "45f9065b-f8c4-4042-82ba-5eb2bff33115",
+    "Nom": "Grondin",
+    "Prenom": "Charles",
+    "Adresses": [
+      {
+        "AdresseId": "c7c6d343-6dbb-df04-cb87-7fbf147397bb",
+        "NumeroCivique": "388",
+        "InformationComplementaire": "East",
+        "Odonyme": "Bernita Mountains",
+        "TypeVoie": "Flats",
+        "CodePostal": "02676-3344",
+        "NomMunicipalite": "Trevionville",
+        "Etat": "Wisconsin",
+        "Pays": "New Zealand"
+      }
+    ]
+  }
+]

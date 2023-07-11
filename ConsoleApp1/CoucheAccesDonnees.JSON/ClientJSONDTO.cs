@@ -3,10 +3,10 @@
 namespace CoucheAccesDonnees.JSON;
 public class ClientJSONDTO
 {
-    public Guid ClientId {get; private set;}
-    public string Nom{get ; private set;}
-    public string Prenom{get; private set;}
-    public List<AdresseJSONDTO> Adresses{get; private set;}
+    public Guid ClientId {get; set;}
+    public string Nom{get ; set;}
+    public string Prenom{get; set;}
+    public List<AdresseJSONDTO> Adresses{get; set;}
 
     public ClientJSONDTO(){}
     public ClientJSONDTO(Client p_client)

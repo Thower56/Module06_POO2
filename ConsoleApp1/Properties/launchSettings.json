@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Module06_POO2": {
+      "commandName": "Project",
+      "commandLineArgs": "xml"
+    }
+  }
+}

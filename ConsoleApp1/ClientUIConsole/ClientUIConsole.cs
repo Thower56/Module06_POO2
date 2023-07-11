@@ -6,7 +6,7 @@ namespace Application
     class ClientUiConsole
     {
         private IDepotClients m_depotClient;
-
+        private Faker<Adresse> fakeAdresse;
         public ClientUiConsole(IDepotClients p_depotClient)
         {
             this.m_depotClient = p_depotClient;
@@ -32,9 +32,12 @@ namespace Application
 
             return choix;
         }
-        public void ExecuterUI(){}
+        public void ExecuterUI()
+        {
 
-        public Client SaisirClientAvecAdresse()
+        }
+
+        public void SaisirClientAvecAdresse()
         {
             Guid id = Guid.NewGuid();
             string prenom;
@@ -48,7 +51,7 @@ namespace Application
             List<Adresse> listAdresse = new List<Adresse>();
             listAdresse.Add(GenererAdresseAleatoire());
             
-            return new Client(id, prenom, nom, listAdresse);
+            m_depotClient.AjouterClient( new Client(id, prenom, nom, listAdresse));
 
         }
 
@@ -84,11 +87,11 @@ namespace Application
         }
         private Adresse GenererAdresseAleatoire()
         {
-            Faker<Adresse> fakeAdresse;
-
-            Randomizer.Seed = new Random(123);
+            Random random = new Random();
+            Randomizer.Seed = new Random(random.Next(10000));
 
             fakeAdresse = new Faker<Adresse>()
+                .StrictMode(true)
                 .RuleFor(u => u.AdresseId, f => f.Random.Guid())
                 .RuleFor(u => u.NumeroCivique, f => f.Random.Int(1, 1000).ToString())
                 .RuleFor(u => u.InformationComplementaire, f => f.Address.Direction())
@@ -100,7 +103,7 @@ namespace Application
                 .RuleFor(u => u.Pays, f => f.Address.Country());
 
             
-            return fakeAdresse;
+            return fakeAdresse.Generate();
         }
 
         

@@ -4,15 +4,15 @@ namespace CoucheAccesDonnees.XML
 {
     public class AdresseXMLDTO
     {
-        public Guid AdresseId {get; private set;}
-        public string NumeroCivique {get; private set;}
-        public string InformationComplementaire {get; private set;}
-        public string Odonyme {get; private set;}
-        public string TypeVoie{get; private set;}
-        public string CodePostal{get; private set;}
-        public string NomMunicipalite{get; private set;}
-        public string Etat{get; private set;}
-        public string Pays{get; private set;}
+        public Guid AdresseId {get; set;}
+        public string NumeroCivique {get; set;}
+        public string InformationComplementaire {get; set;}
+        public string Odonyme {get; set;}
+        public string TypeVoie{get; set;}
+        public string CodePostal{get; set;}
+        public string NomMunicipalite{get; set;}
+        public string Etat{get; set;}
+        public string Pays{get; set;}
 
         public AdresseXMLDTO(){}
         public AdresseXMLDTO(Adresse p_client)

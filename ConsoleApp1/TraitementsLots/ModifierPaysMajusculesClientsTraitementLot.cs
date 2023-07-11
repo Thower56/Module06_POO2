@@ -20,10 +20,21 @@ public class ModifierPaysMajusculesClientsTraitementLot : ITraitementLot
             if (!Char.IsUpper(nom[0]))
             {
                 string nouveauNom;
-                nouveauNom = nom[0].ToString();
-                nouveauNom += nom.Substring(1);
-
+                nouveauNom = nom[0].ToString().ToUpper(); ;
+                nouveauNom += nom.Substring(1).ToLower();
+                c.ChangerNomClient(nouveauNom);
+                
             }
+            if (!Char.IsUpper(prenom[0]))
+            {
+                string nouveauPrenom;
+                nouveauPrenom = nom[0].ToString().ToUpper();
+                nouveauPrenom += nom.Substring(1).ToLower();
+                c.ChangerNomClient(nouveauPrenom);
+            }
+            m_depotClient.ModifierClient(c);
         }
+
+        
     }
 }

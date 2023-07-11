@@ -11,10 +11,17 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             var container = new UnityContainer();
-            string fichierJson = "Test.Json";
-            string ficherXML = "Test.XML";
-            container.RegisterType<IDepotClients, DepotClientsJSON>(TypeLifetime.Singleton, new Unity.Injection.InjectionConstructor(new object[] { fichierJson }));
-            //container.RegisterType<IDepotClients, DepotClientsXML>(TypeLifetime.Singleton, new Unity.Injection.InjectionConstructor(new object[] { ficherXML }));
+            string fichierJson = @"C:\Session3\OOP2\Module06_POO2\test.json";
+            string ficherXML = @"C:\Session3\OOP2\Module06_POO2\test.xml";
+
+            if (args.Count() >= 1 && args[0] == "xml")
+            {
+                container.RegisterType<IDepotClients, DepotClientsXML>(TypeLifetime.Singleton, new Unity.Injection.InjectionConstructor(new object[] { ficherXML }));
+            }
+            else
+            {
+                container.RegisterType<IDepotClients, DepotClientsJSON>(TypeLifetime.Singleton, new Unity.Injection.InjectionConstructor(new object[] { fichierJson }));
+            }
 
             var ui = container.Resolve<ClientUiConsole>();
 
