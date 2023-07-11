@@ -7,7 +7,7 @@ public class ModifierPaysMajusculesClientsTraitementLot : ITraitementLot
     private IDepotClients m_depotClient;
     public ModifierPaysMajusculesClientsTraitementLot(IDepotClients p_depotClient)
     {
-        
+        m_depotClient = p_depotClient;
     }
     public void Executer() 
     {
@@ -15,23 +15,7 @@ public class ModifierPaysMajusculesClientsTraitementLot : ITraitementLot
 
         foreach (Client c in listeClient)
         {
-            string nom = c.Nom;
-            string prenom = c.Prenom;
-            if (!Char.IsUpper(nom[0]))
-            {
-                string nouveauNom;
-                nouveauNom = nom[0].ToString().ToUpper(); ;
-                nouveauNom += nom.Substring(1).ToLower();
-                c.ChangerNomClient(nouveauNom);
-                
-            }
-            if (!Char.IsUpper(prenom[0]))
-            {
-                string nouveauPrenom;
-                nouveauPrenom = nom[0].ToString().ToUpper();
-                nouveauPrenom += nom.Substring(1).ToLower();
-                c.ChangerNomClient(nouveauPrenom);
-            }
+            c.Adresses.Where(a => a.Pays.Any(c => Char.IsLower(c))).ToList().ForEach(a => a.ChangerPayEnMajuscule());
             m_depotClient.ModifierClient(c);
         }
 

@@ -29,13 +29,19 @@ public class Client
         if (!Char.IsUpper(prenom[0]))
         {
             string nouveauPrenom;
-            nouveauPrenom = nom[0].ToString().ToUpper();
-            nouveauPrenom += nom.Substring(1).ToLower();
+            nouveauPrenom = Prenom[0].ToString().ToUpper();
+            nouveauPrenom += Prenom.Substring(1).ToLower();
             Prenom = nouveauPrenom;
         }
     }
 
-    public void ChangerPayEnMajuscule() { }
+    public void PayEnMajuscule()
+    {
+        foreach (Adresse a in Adresses)
+        {
+            a.ChangerPayEnMajuscule();
+        }
+    }
     public void ChangerPrenomClient(string p_prenom)
     {
         this.Prenom = p_prenom;

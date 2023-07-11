@@ -11,8 +11,8 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             var container = new UnityContainer();
-            string fichierJson = @"C:\Session3\OOP2\Module06_POO2\test.json";
-            string ficherXML = @"C:\Session3\OOP2\Module06_POO2\test.xml";
+            string fichierJson = @"C:\test.json";
+            string ficherXML = @"C:\test.xml";
 
             if (args.Count() >= 1 && args[0] == "xml")
             {

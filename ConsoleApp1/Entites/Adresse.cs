@@ -25,6 +25,13 @@ namespace Entites
         public string Etat{get; private set;}
         public string Pays{get; private set;}
 
+        public void ChangerPayEnMajuscule()
+        {
+            if (Pays.Any(p => Char.IsLower(p)))
+            {
+                Pays = Pays.ToUpper();
+            }
+        }
         public override string ToString()
         {
             return $"{AdresseId} : {NumeroCivique} : {InformationComplementaire} : {Odonyme} : {TypeVoie} : {CodePostal} : {NomMunicipalite} : {Etat} : {Pays}\n";

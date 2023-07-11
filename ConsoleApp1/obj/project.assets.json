@@ -205,11 +205,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Session3\\OOP2\\Module06_POO2\\ConsoleApp1\\Module06_POO2.csproj",
+      "projectUniqueName": "C:\\Users\\charl\\OneDrive\\Documents\\GitHub\\DemoGitHubDesktop-Charles\\Module06_POO2\\ConsoleApp1\\Module06_POO2.csproj",
       "projectName": "Module06_POO2",
-      "projectPath": "C:\\Session3\\OOP2\\Module06_POO2\\ConsoleApp1\\Module06_POO2.csproj",
+      "projectPath": "C:\\Users\\charl\\OneDrive\\Documents\\GitHub\\DemoGitHubDesktop-Charles\\Module06_POO2\\ConsoleApp1\\Module06_POO2.csproj",
       "packagesPath": "C:\\Users\\charl\\.nuget\\packages\\",
-      "outputPath": "C:\\Session3\\OOP2\\Module06_POO2\\ConsoleApp1\\obj\\",
+      "outputPath": "C:\\Users\\charl\\OneDrive\\Documents\\GitHub\\DemoGitHubDesktop-Charles\\Module06_POO2\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\charl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -267,7 +267,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
