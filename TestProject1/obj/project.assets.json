@@ -6121,11 +6121,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\charl\\OneDrive\\Documents\\GitHub\\DemoGitHubDesktop-Charles\\Module06_POO2\\TestProject1\\TestProject1.csproj",
+      "projectUniqueName": "C:\\Session3\\OOP2\\Module06_POO2\\TestProject1\\TestProject1.csproj",
       "projectName": "TestProject1",
-      "projectPath": "C:\\Users\\charl\\OneDrive\\Documents\\GitHub\\DemoGitHubDesktop-Charles\\Module06_POO2\\TestProject1\\TestProject1.csproj",
+      "projectPath": "C:\\Session3\\OOP2\\Module06_POO2\\TestProject1\\TestProject1.csproj",
       "packagesPath": "C:\\Users\\charl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\charl\\OneDrive\\Documents\\GitHub\\DemoGitHubDesktop-Charles\\Module06_POO2\\TestProject1\\obj\\",
+      "outputPath": "C:\\Session3\\OOP2\\Module06_POO2\\TestProject1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\charl\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6142,8 +6142,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\charl\\OneDrive\\Documents\\GitHub\\DemoGitHubDesktop-Charles\\Module06_POO2\\ConsoleApp1\\Module06_POO2.csproj": {
-              "projectPath": "C:\\Users\\charl\\OneDrive\\Documents\\GitHub\\DemoGitHubDesktop-Charles\\Module06_POO2\\ConsoleApp1\\Module06_POO2.csproj"
+            "C:\\Session3\\OOP2\\Module06_POO2\\ConsoleApp1\\Module06_POO2.csproj": {
+              "projectPath": "C:\\Session3\\OOP2\\Module06_POO2\\ConsoleApp1\\Module06_POO2.csproj"
             }
           }
         }
@@ -6199,7 +6199,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

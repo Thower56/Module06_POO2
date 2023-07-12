@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "116aJZCdqZflf8LvUItgvQrqLJ8BHvXjk0aLNKhm+QG9+msyXVh5W6MJHCp0jeGRMsRrijiACupuYmtpRDj38w==",
+  "dgSpecHash": "4oORZLdbrjoaebvUAGXCedLvr2OBseagIE4p86isgBClqcPh9cTPwNExCrVX/CvpxuKnVvufF7MalCeNHvJJ9Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\charl\\OneDrive\\Documents\\GitHub\\DemoGitHubDesktop-Charles\\Module06_POO2\\TestProject1\\TestProject1.csproj",
+  "projectFilePath": "C:\\Session3\\OOP2\\Module06_POO2\\TestProject1\\TestProject1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\charl\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\charl\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",

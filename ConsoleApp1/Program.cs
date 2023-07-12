@@ -11,8 +11,8 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             var container = new UnityContainer();
-            string fichierJson = @"C:\test.json";
-            string ficherXML = @"C:\test.xml";
+            string fichierJson = @"C:\Session3\OOP2\Module06_POO2\test.json";
+            string ficherXML = @"C:\Session3\OOP2\Module06_POO2\test.xml";
 
             if (args.Count() >= 1 && args[0] == "xml")
             {
@@ -38,11 +38,10 @@ namespace ConsoleApp1
                         ui.SaisirClientAvecAdresse();
                         break;
                     case 2:
-                        Console.WriteLine("Quel est l'id du Client a trouver: ");
-                        Guid id = Guid.Parse(Console.ReadLine());
-                        ui.RechercherETAfficherClientParId(id);
+                        ui.RechercherETAfficherClientParId();
                         break;
                     case 3:
+                        ui.ModifierClient();
                         break;
                     case 4:
                         ui.ListerEtAfficherClients();

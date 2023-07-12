@@ -37,6 +37,23 @@ namespace Application
 
         }
 
+        public void ModifierClient()
+        {
+            Console.Write("Quel est le numero du Client: ");
+            Guid p_ClientID = Guid.Parse(Console.ReadLine());
+            List<Client> listClient = m_depotClient.ListerClients();
+
+            Client ClientAModifier = listClient.Where(c => c.ClientId == p_ClientID).ToList().SingleOrDefault();
+            Console.WriteLine("Nouveau nom: ");
+            string Nom = Console.ReadLine();
+            ClientAModifier.ChangerNomClient(Nom);
+            Console.WriteLine("Nouveau prenom: ");
+            string Prenom = Console.ReadLine();
+            ClientAModifier.ChangerNomClient(Prenom);
+
+            m_depotClient.ModifierClient(ClientAModifier);
+        }
+
         public void SaisirClientAvecAdresse()
         {
             Guid id = Guid.NewGuid();
@@ -51,7 +68,7 @@ namespace Application
             List<Adresse> listAdresse = new List<Adresse>();
             listAdresse.Add(GenererAdresseAleatoire());
             
-            m_depotClient.AjouterClient( new Client(id, prenom, nom, listAdresse));
+            m_depotClient.AjouterClient(new Client(id, prenom, nom, listAdresse));
 
         }
 
@@ -70,11 +87,14 @@ namespace Application
         }
 
 
-        public void RechercherETAfficherClientParId(Guid p_ClientID)
+        public void RechercherETAfficherClientParId()
         {
+            Console.Write("Quel est le numero du Client: ");
+            Guid p_ClientID = Guid.Parse(Console.ReadLine());
             List<Client> listClient = m_depotClient.ListerClients();
 
-            Console.WriteLine(listClient.Find(c => c.ClientId == p_ClientID).ToString());
+            AfficherClient(listClient.Where(c => c.ClientId == p_ClientID).ToList().SingleOrDefault());
+           
         }
         public void ListerEtAfficherClients()
         {
